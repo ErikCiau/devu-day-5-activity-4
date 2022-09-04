@@ -1,0 +1,33 @@
+<div class="content">
+  <mat-card>
+    <div class="card-header">
+      <div>
+        <mat-card-title>{{title}}</mat-card-title>
+        <mat-card-subtitle>{{httpMethod | uppercase }} {{path}}</mat-card-subtitle>
+      </div>
+      <div>
+        <button (click)="onRunResponse()" mat-flat-button color="primary">
+          <mat-icon fontIcon="play_arrow"></mat-icon>
+        </button>
+      </div>
+    </div>
+  </mat-card>
+
+  <mat-card *ngIf="response">
+    <div class="card-header">
+      <div>
+        <mat-card-title>Respuesta</mat-card-title>
+        <mat-card-subtitle>Status: 200</mat-card-subtitle>
+      </div>
+      <div>
+        <button (click)="clearResponse()" mat-flat-button color="accent">
+          <mat-icon fontIcon="restart_alt"></mat-icon>
+        </button>
+      </div>
+    </div>
+    <div>
+      <code><pre>{{response}}</pre></code>
+    </div>
+  </mat-card>
+
+</div>

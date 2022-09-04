@@ -1,0 +1,11 @@
+<div style="padding-bottom: 1rem;">
+  <app-navbar></app-navbar>
+  <section class="container">
+    <app-card-response title="Obtener todas las cuentas" path="/cuentas" httpMethod="get" [response]="allAccounts" (action)="getAccounts()"></app-card-response>
+    <app-card-response title="Obtener una cuenta" path="/cuentas/:id" httpMethod="get" [response]="oneAccount" (action)="getOneAccount()"></app-card-response>
+    <app-card-response title="Agregar una cuenta" path="/cuentas/" httpMethod="post" [response]="postAccount" (action)="addAccount()"></app-card-response>
+    <app-card-response title="Editar monto de una cuenta" path="/cuentas/:id" httpMethod="patch" [response]="patchAccount" (action)="editPartialAccount()"></app-card-response>
+    <app-card-response title="Editar una cuenta" path="/cuentas/:id" httpMethod="put" [response]="putAccount" (action)="editAccount()"></app-card-response>
+    <app-card-response title="Eliminar una cuenta" path="/cuentas/:id" httpMethod="delete" [response]="_deleteAccount" (action)="deleteAccount()"></app-card-response>
+  </section>
+</div>

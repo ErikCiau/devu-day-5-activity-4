@@ -1,0 +1,11 @@
+.content {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+}
+.card-header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
